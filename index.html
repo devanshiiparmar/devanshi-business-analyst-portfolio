@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,134 +14,372 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
             color: #1f2937;
             background: #ffffff;
+            line-height: 1.6;
         }
 
-        header {
-            background: #f5f8fc;
-            padding: 80px 20px;
-            text-align: center;
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
             color: #163a63;
         }
 
-        header p {
-            font-size: 20px;
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #163a63;
+        }
+
+        /* Hero */
+
+        .hero {
+            background: #f5f8fc;
+            padding: 100px 8%;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 54px;
+            color: #163a63;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 25px;
+            font-weight: normal;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 18px;
             color: #4b5563;
         }
 
         .buttons {
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
-        .buttons a {
+        .button {
             display: inline-block;
             padding: 12px 22px;
-            margin: 5px;
-            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
             border-radius: 6px;
-            background: #163a63;
-            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
         }
 
+        .primary {
+            background: #163a63;
+            color: #ffffff;
+        }
+
+        .secondary {
+            border: 1px solid #163a63;
+            color: #163a63;
+            background: #ffffff;
+        }
+
+        /* Sections */
+
         .container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 75px 25px;
         }
 
         section {
-            margin-bottom: 60px;
+            margin-bottom: 20px;
         }
 
-        h2 {
-            color: #163a63;
-            margin-bottom: 20px;
+        .section-title {
             font-size: 30px;
+            color: #163a63;
+            margin-bottom: 12px;
         }
+
+        .section-subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        /* About */
+
+        .about-text {
+            max-width: 800px;
+            font-size: 17px;
+            color: #4b5563;
+        }
+
+        /* Skills */
 
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
 
         .skill {
-            background: #eef3f8;
-            padding: 10px 16px;
+            padding: 10px 18px;
+            background: #f5f8fc;
+            border: 1px solid #e5e7eb;
             border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Projects */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
         .project {
             border: 1px solid #e5e7eb;
             border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 28px;
+            background: #ffffff;
+        }
+
+        .project:hover {
+            border-color: #163a63;
         }
 
         .project h3 {
             color: #163a63;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 21px;
         }
 
-        .project a {
+        .project p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .project ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+
+        .project-link {
+            text-decoration: none;
             color: #163a63;
             font-weight: bold;
-            text-decoration: none;
+            font-size: 14px;
         }
+
+        /* Business Analysis */
+
+        .ba-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .ba-item {
+            padding: 22px;
+            background: #f5f8fc;
+            border-radius: 7px;
+        }
+
+        .ba-item h3 {
+            color: #163a63;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .ba-item p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        /* Contact */
+
+        .contact {
+            background: #f5f8fc;
+            text-align: center;
+            padding: 75px 25px;
+        }
+
+        .contact p {
+            color: #4b5563;
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
 
         footer {
             text-align: center;
-            padding: 30px;
-            background: #f5f8fc;
-            color: #6b7280;
+            padding: 25px;
+            background: #163a63;
+            color: #ffffff;
+            font-size: 13px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero {
+                padding: 70px 25px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ba-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Devanshi Parmar</h1>
+<!-- Navigation -->
 
-    <p>Business Analyst | SQL | Power BI | Python</p>
+<nav>
+    <div class="logo">Devanshi Parmar</div>
 
-    <div class="buttons">
-        <a href="https://github.com/devanshiiparmar" target="_blank">
-            GitHub
-        </a>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#business-analysis">Business Analysis</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <a href="https://www.linkedin.com/" target="_blank">
-            LinkedIn
-        </a>
-    </div>
-</header>
 
-<div class="container">
+<!-- Hero -->
 
-    <section>
-        <h2>About Me</h2>
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>Devanshi Parmar</h1>
+
+        <h2>Business Analyst | SQL | Power BI | Python</h2>
 
         <p>
+            Turning data into actionable business insights through analysis,
+            visualization, and problem-solving.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button primary"
+               href="https://drive.google.com/file/d/1pPvCurwsYDny1iA8hKJJVIdYliVaUL8J/view?usp=sharing"
+               target="_blank">
+                View Resume
+            </a>
+
+            <a class="button secondary"
+               href="https://www.linkedin.com/in/devanshi-parmar-9a3b0624b/"
+               target="_blank">
+                LinkedIn
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/devanshiiparmar"
+               target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <!-- About -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="about-text">
             I am a Business Analyst with a background in Computer Engineering,
             focused on data analysis, business insights, and data visualization.
-            I use SQL, Python, Excel, and Power BI to analyze data and support
-            business decision-making.
+            I use SQL, Python, Excel, and Power BI to analyze data, identify
+            trends, and support data-driven business decisions.
         </p>
+
     </section>
 
-    <section>
-        <h2>Skills</h2>
+
+    <!-- Skills -->
+
+    <section id="skills">
+
+        <h2 class="section-title">Skills</h2>
+
+        <p class="section-subtitle">
+            Tools and capabilities I use for analysis and business problem-solving.
+        </p>
 
         <div class="skills">
+
             <div class="skill">SQL</div>
             <div class="skill">Python</div>
             <div class="skill">Excel</div>
@@ -148,74 +387,188 @@
             <div class="skill">Data Analysis</div>
             <div class="skill">Data Visualization</div>
             <div class="skill">Business Analysis</div>
+            <div class="skill">Requirements Analysis</div>
             <div class="skill">Stakeholder Management</div>
-        </div>
-    </section>
+            <div class="skill">UAT</div>
 
-    <section>
-        <h2>Featured Projects</h2>
-
-        <div class="project">
-            <h3>Customer Churn & Retention Analysis</h3>
-
-            <p>
-                Analyzed 800 telecom customers using Python and SQL to identify
-                churn patterns and high-risk customer segments.
-            </p>
-
-            <p>
-                Overall churn was 32.38%, with month-to-month customers showing
-                a 43.86% churn rate.
-            </p>
-
-            <br>
-
-            <a href="https://github.com/devanshiiparmar/customer-churn-retention-analysis"
-               target="_blank">
-                View Project →
-            </a>
         </div>
 
-        <div class="project">
-            <h3>More Projects Coming Soon</h3>
+    </section>
 
-            <p>
-                Additional Business Analysis and Power BI projects will be added
-                to this portfolio.
-            </p>
+
+    <!-- Projects -->
+
+    <section id="projects">
+
+        <h2 class="section-title">Featured Projects</h2>
+
+        <p class="section-subtitle">
+            Selected projects demonstrating data analysis and business problem-solving.
+        </p>
+
+        <div class="project-grid">
+
+            <div class="project">
+
+                <h3>Customer Churn & Retention Analysis</h3>
+
+                <p>
+                    Analyzed telecom customer data to identify churn patterns,
+                    high-risk segments, and retention opportunities.
+                </p>
+
+                <ul>
+                    <li>Analyzed 800 customers using Python and SQL.</li>
+                    <li>Overall churn rate: 32.38%.</li>
+                    <li>Month-to-month churn: 43.86%.</li>
+                    <li>Built an interactive Power BI dashboard.</li>
+                    <li>Provided customer retention recommendations.</li>
+                </ul>
+
+                <a class="project-link"
+                   href="https://github.com/devanshiiparmar/customer-churn-retention-analysis"
+                   target="_blank">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Sales Performance Analysis</h3>
+
+                <p>
+                    Power BI analysis focused on sales performance, regional
+                    trends, and business KPIs.
+                </p>
+
+                <a class="project-link" href="#contact">
+                    Project Details Coming Soon
+                </a>
+
+            </div>
+
         </div>
+
     </section>
 
-    <section>
-        <h2>Business Analysis</h2>
 
-        <p>
-            Business analysis work including requirements gathering,
-            stakeholder analysis, process analysis, user stories,
-            acceptance criteria, and UAT documentation.
+    <!-- Business Analysis -->
+
+    <section id="business-analysis">
+
+        <h2 class="section-title">Business Analysis</h2>
+
+        <p class="section-subtitle">
+            Business analysis techniques and artifacts developed to support
+            structured problem-solving and decision-making.
         </p>
+
+        <div class="ba-grid">
+
+            <div class="ba-item">
+
+                <h3>Requirements Analysis</h3>
+
+                <p>
+                    Translating business needs into clear and actionable requirements.
+                </p>
+
+            </div>
+
+            <div class="ba-item">
+
+                <h3>User Stories</h3>
+
+                <p>
+                    Defining user needs and expected outcomes from a business perspective.
+                </p>
+
+            </div>
+
+            <div class="ba-item">
+
+                <h3>Process Analysis</h3>
+
+                <p>
+                    Understanding existing processes and identifying improvement opportunities.
+                </p>
+
+            </div>
+
+            <div class="ba-item">
+
+                <h3>Stakeholder Analysis</h3>
+
+                <p>
+                    Identifying stakeholders, their needs, and their involvement in projects.
+                </p>
+
+            </div>
+
+            <div class="ba-item">
+
+                <h3>UAT</h3>
+
+                <p>
+                    Designing test scenarios and validating solutions against business requirements.
+                </p>
+
+            </div>
+
+            <div class="ba-item">
+
+                <h3>Data Analysis</h3>
+
+                <p>
+                    Using SQL, Python, Excel, and Power BI to generate actionable insights.
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <section>
-        <h2>Contact</h2>
+</main>
 
-        <p>
-            GitHub: 
-            <a href="https://github.com/devanshiiparmar" target="_blank">
-                github.com/devanshiiparmar
-            </a>
-        </p>
 
-        <p>
-            LinkedIn: Add your LinkedIn profile link here
-        </p>
-    </section>
+<!-- Contact -->
 
-</div>
+<section id="contact" class="contact">
+
+    <h2 class="section-title">Let's Connect</h2>
+
+    <p>
+        Interested in discussing Business Analysis, data, or opportunities?
+    </p>
+
+    <div class="buttons">
+
+        <a class="button primary"
+           href="https://www.linkedin.com/in/devanshi-parmar-9a3b0624b/"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a class="button secondary"
+           href="https://github.com/devanshiiparmar"
+           target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
+</section>
+
 
 <footer>
+
     © 2026 Devanshi Parmar
+
 </footer>
 
 </body>
 </html>
+```
