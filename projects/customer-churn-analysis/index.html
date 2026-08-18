@@ -1,0 +1,495 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Churn Analysis | Devanshi Parmar</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        nav {
+            padding: 18px 8%;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #163a63;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: #f5f8fc;
+            padding: 70px 8%;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #163a63;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            font-size: 18px;
+            color: #4b5563;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 25px;
+        }
+
+        section {
+            margin-bottom: 55px;
+        }
+
+        h2 {
+            color: #163a63;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #4b5563;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .stat {
+            padding: 25px;
+            background: #f5f8fc;
+            border-radius: 7px;
+            text-align: center;
+        }
+
+        .stat h3 {
+            font-size: 30px;
+            color: #163a63;
+        }
+
+        .stat p {
+            font-size: 14px;
+        }
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .tool {
+            padding: 9px 15px;
+            background: #f5f8fc;
+            border: 1px solid #e5e7eb;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        ul {
+            margin: 15px 0 0 20px;
+            color: #4b5563;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .insight {
+            padding: 20px;
+            border-left: 4px solid #163a63;
+            background: #f5f8fc;
+            margin-top: 15px;
+        }
+
+        .dashboard {
+            margin-top: 25px;
+            padding: 30px;
+            background: #f5f8fc;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .dashboard p {
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #163a63;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .back {
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #163a63;
+            color: white;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<nav>
+
+    <a href="../../index.html">
+        ← Back to Portfolio
+    </a>
+
+    <a href="https://github.com/devanshiiparmar/customer-churn-retention-analysis"
+       target="_blank">
+        GitHub Repository
+    </a>
+
+</nav>
+
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <h1>Customer Churn & Retention Analysis</h1>
+
+        <p>
+            An end-to-end analysis of telecom customer churn using Python,
+            SQL, and Power BI to identify high-risk customer segments and
+            support customer retention strategies.
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- Overview -->
+
+    <section>
+
+        <h2>Project Overview</h2>
+
+        <p>
+            This project analyzes telecom customer data to understand churn
+            patterns and identify customer segments that are more likely to
+            leave the company.
+        </p>
+
+        <p>
+            The analysis combines Python for exploratory data analysis,
+            SQL for business analysis, and Power BI for interactive
+            visualization.
+        </p>
+
+    </section>
+
+
+    <!-- Objective -->
+
+    <section>
+
+        <h2>Business Objective</h2>
+
+        <ul>
+
+            <li>Measure the overall customer churn rate.</li>
+
+            <li>Identify customer segments with higher churn risk.</li>
+
+            <li>Analyze churn by contract type and tenure.</li>
+
+            <li>Identify opportunities for improving customer retention.</li>
+
+            <li>Present insights through an interactive dashboard.</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- Key Metrics -->
+
+    <section>
+
+        <h2>Key Results</h2>
+
+        <div class="stats">
+
+            <div class="stat">
+
+                <h3>32.38%</h3>
+
+                <p>Overall Churn Rate</p>
+
+            </div>
+
+            <div class="stat">
+
+                <h3>43.86%</h3>
+
+                <p>Month-to-Month Churn</p>
+
+            </div>
+
+            <div class="stat">
+
+                <h3>800</h3>
+
+                <p>Total Customers Analyzed</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Tools -->
+
+    <section>
+
+        <h2>Tools Used</h2>
+
+        <div class="tools">
+
+            <div class="tool">Python</div>
+            <div class="tool">Pandas</div>
+            <div class="tool">SQL</div>
+            <div class="tool">Power BI</div>
+            <div class="tool">Git & GitHub</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Analysis -->
+
+    <section>
+
+        <h2>Analysis Performed</h2>
+
+        <ul>
+
+            <li>
+                Cleaned and explored customer data using Python and Pandas.
+            </li>
+
+            <li>
+                Analyzed churn distribution and customer characteristics.
+            </li>
+
+            <li>
+                Used SQL to analyze churn across contract and tenure groups.
+            </li>
+
+            <li>
+                Created Power BI visualizations to communicate churn patterns.
+            </li>
+
+            <li>
+                Identified high-risk customer segments for retention efforts.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- Findings -->
+
+    <section>
+
+        <h2>Key Insights</h2>
+
+        <div class="insight">
+
+            <strong>Contract Type</strong>
+
+            <p>
+                Month-to-month customers have the highest churn rate at
+                43.86%, compared with 20.31% for one-year contracts and
+                13.16% for two-year contracts.
+            </p>
+
+        </div>
+
+
+        <div class="insight">
+
+            <strong>Customer Tenure</strong>
+
+            <p>
+                Customers with shorter tenure show higher churn, indicating
+                that the early customer experience is an important retention
+                opportunity.
+            </p>
+
+        </div>
+
+
+        <div class="insight">
+
+            <strong>High-Risk Segment</strong>
+
+            <p>
+                Customers with shorter tenure and higher-risk contract
+                characteristics should be prioritized for proactive
+                retention campaigns.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+
+    <section>
+
+        <h2>Power BI Dashboard</h2>
+
+        <div class="dashboard">
+
+            <p>
+                Interactive dashboard showing overall churn, contract-based
+                churn, tenure analysis, and high-risk customer segments.
+            </p>
+
+            <p>
+                Dashboard screenshots will be added here.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Recommendations -->
+
+    <section>
+
+        <h2>Business Recommendations</h2>
+
+        <ul>
+
+            <li>
+                Focus retention efforts on month-to-month customers.
+            </li>
+
+            <li>
+                Improve onboarding and early engagement for new customers.
+            </li>
+
+            <li>
+                Encourage customers to move to longer-term contracts.
+            </li>
+
+            <li>
+                Target high-risk customers with proactive retention offers.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- Repository -->
+
+    <section>
+
+        <h2>Project Repository</h2>
+
+        <p>
+            View the complete project files, SQL analysis, Python notebook,
+            and Power BI dashboard on GitHub.
+        </p>
+
+        <a class="button"
+           href="https://github.com/devanshiiparmar/customer-churn-retention-analysis"
+           target="_blank">
+            View GitHub Repository
+        </a>
+
+    </section>
+
+
+    <div class="back">
+
+        <a href="../../index.html">
+            ← Back to Portfolio
+        </a>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    © 2026 Devanshi Parmar
+
+</footer>
+
+</body>
+
+</html>
+```
